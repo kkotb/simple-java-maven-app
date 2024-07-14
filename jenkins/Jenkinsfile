@@ -31,5 +31,10 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+         stage('end') {
+            steps {
+                echo 'end koks'
+            }
+        }
     }
 }
