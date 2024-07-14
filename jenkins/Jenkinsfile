@@ -6,6 +6,11 @@ pipeline {
         PATH = "${MAVEN_HOME}/bin:${env.JAVA_HOME}/bin:$PATH"
     }
     stages {
+        stage('start') {
+            steps {
+                echo 'start koks'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
