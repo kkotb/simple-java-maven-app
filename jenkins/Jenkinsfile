@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    environment {
+        JDK_VERSION = '17'  // JDK version to use
+        MAVEN_HOME = tool name: 'Maven 3.9.8', type: 'maven'
+        PATH = "${MAVEN_HOME}/bin:${env.JAVA_HOME}/bin:$PATH"
+    }
     stages {
         stage('Build') {
             steps {
