@@ -33,7 +33,7 @@ pipeline {
         }
          stage('end') {
             steps {
-                echo 'end koks'
+                echo 'end test'
             }
         }
     }
